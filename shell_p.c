@@ -26,13 +26,15 @@ void display_prompt(void)
 /**
  * * main - entry point.
  *
- * Return: 0 on success, 1 on error.
+ * Return: 0 on success,i 1 on error.
  */
 
 int main(void)
 {
 	char input[MAX_INPUT_LENGTH], *argv[2];
 	int status;
+
+	display_prompt();
 
 	while (1)
 	{
