@@ -15,6 +15,7 @@
 /* for read/write buffers */
 #define MAX_INPUT_LENGTH 100
 #define MAX_PATH_LENGTH 100
+#define MAX_INPUT_SIZE 1024
 
 /* for command chaining */
 #define CMD_NORM	0
@@ -29,5 +30,7 @@
 /*shell_prompt*/
 void display_prompt(void);
 int main(void);
+char *my_getline(void);
+int line(void);
 
 #endif
