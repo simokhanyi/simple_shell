@@ -24,12 +24,14 @@ void display_prompt(void)
 }
 
 /**
- * * main - entry point.
+ * main - entry point.
+ * @input: input to a program
+ * @args: arg vector
  *
  * Return: 0 on success,i 1 on error.
  */
 
-int main(void)
+int main(char input, *args)
 {
 	char input[MAX_INPUT_LENGTH], *argv[2];
 	int status;
