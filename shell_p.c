@@ -23,7 +23,7 @@
 
 int main(void)
 {
-	char input[MAX_INPUT_LENGTH], cwd[MAX_INPUT_SIZE], *argv[2];
+	char input[MAX_INPUT_LENGTH], *argv[2];
 	int status;
 
 	while (1)
@@ -39,8 +39,7 @@ int main(void)
 		if (strcmp(input, "exit") == 0)
 		{	printf("Exiting the shell...\n");
 			exit(0);
-		}
-		if (access(input, X_OK) == 0)
+		} if (access(input, X_OK) == 0)
 		{
 			if (fork() == 0)
 			{	execv(input, argv);
