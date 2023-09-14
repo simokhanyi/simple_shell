@@ -23,7 +23,7 @@
 
 int main(void)
 {
-	char input[MAX_INPUT_LENGTH], *argv[2];
+	char input[MAX_INPUT_LENGTH], cwd[MAX_INPUT_SIZE], *argv[2];
 	int status;
 
 	while (1)
