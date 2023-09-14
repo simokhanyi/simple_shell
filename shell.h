@@ -28,10 +28,6 @@
 #define CONVERT_UNSIGNED	2
 
 /*shell_prompt*/
-void display_prompt(void);
 int main(void);
-char *my_getline(void);
-int line(void);
-int exit_builtins(void);
 
 #endif
