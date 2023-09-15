@@ -29,5 +29,6 @@
 
 /*shell_prompt*/
 int main(void);
+void run_command(char *command);
 
 #endif
