@@ -10,16 +10,6 @@
 #include <errno.h>
 #include "shell.h"
 
-
-#define MAX_INPUT_LENGTH 100
-#define MAX_PATH_LENGTH 100
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/wait.h>
-
 #define MAX_INPUT_LENGTH 100
 #define MAX_PATH_LENGTH 100
 
@@ -61,7 +51,7 @@ void run_command(char *command)
 }
 
 /**
- * main - entry point.
+ * path - entry point.
  *
  *
  * Return: 0 on success, 1 on error.
@@ -69,14 +59,7 @@ void run_command(char *command)
 
 int main(void)
 {
-	char input[MAX_INPUT_LENGTH], *envp;
-	int i;
-
-	envp[] = {NULL};
-	for (i = 0; environ[i] != NULL; i++)
-	{
-		envp[i] = strdup(environ[i]);
-	}
+	char input[MAX_INPUT_LENGTH];
 
 	while (1)
 	{
@@ -93,20 +76,8 @@ int main(void)
 		{
 			printf("Exiting the shell...\n");
 			exit(0);
-		} else if (strcmp(input, "env") == 0)
-		{
-			for (i = 0; envp[i] != NULL; i++)
-			{
-				printf("%s\n", envp[i]);
-			}
-		} else
-		{
-			run_command(input, envp);
 		}
-	}
-	for (i = 0; envp[i] != NULL; i++)
-	{
-		free(envp[i]);
+		run_command(input);
 	}
 	return (0);
 }
