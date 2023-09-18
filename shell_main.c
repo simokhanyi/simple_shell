@@ -51,8 +51,40 @@ void run_command(char *command)
 }
 
 /**
- * path - entry point.
+ * printCurrEnvir - current environment.
  *
+ * main - Entry point.
+ * @environ - built function for env.
+ * Return: Always 0 (Success)
+ */
+
+void printCurrEnvir(void);
+
+int main(void)
+{
+
+	printCurrEnvir();
+	return (0);
+
+void printCurrEnvir(void)
+{
+	static char **environ;
+
+	if (environ == NULL)
+	{
+	printf("Current Environment Can't be Accessed.\n");
+	return;
+	}
+
+	for (char **env = environ; *env != NULL; env++)
+	{
+	printf("%s\n", *env);
+	}
+}
+
+/**
+ * main - entry point.
+ * path - entry point.
  *
  * Return: 0 on success, 1 on error.
  */
