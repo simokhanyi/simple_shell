@@ -32,5 +32,5 @@ int main(void);
 void run_command(char *command);
 ssize_t my_getline(char **line, size_t max_len, int fd);
 int my_line(void);
-
+void printCurrEnvir(void);
 #endif
