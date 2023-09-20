@@ -17,6 +17,7 @@
 #define MAX_PATH_LENGTH 256
 #define MAX_ARG_COUNT 10
 #define MAX_ARGS 10
+#define UNUSED(x) (void)(x)
 
 /* for command chaining */
 #define CMD_NORM	0
@@ -33,10 +34,5 @@ int main(int argc, char *argv[]);
 void my_exit(void);
 void my_env(char **environ);
 void execute_command(char *command, char **environ);
-void run_command(char *command);
-void display_prompt(void);
-void parse_input(int arg_count , int input, char **token);
-ssize_t my_getline(char **line, size_t max_len, int fd);
-int my_line(void);
 
 #endif
