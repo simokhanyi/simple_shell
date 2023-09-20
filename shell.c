@@ -9,6 +9,7 @@
 #define MAX_INPUT_LENGTH 100
 #define MAX_PATH_LENGTH 256
 #define MAX_ARGS 10
+#define UNUSED(x) (void)(x)
 
 /**
  * my_exit - exit shell.
@@ -73,15 +74,18 @@ void execute_command(char *command, char **environ)
 
 /**
  * main - entry point.
- *
+ * @argc: args count.
+ * @argv: arg vector.
  *
  * Return: with 0 or NULL if failed.
  */
 
-int main(void)
+int main(int argc, char *argv[])
 {
 	char input[MAX_INPUT_LENGTH], command_path[MAX_PATH_LENGTH];
-	char *path, *token, *argv[10];
+	char *path, *token;
+
+	UNUSED(argc);
 
 	while (1)
 	{
