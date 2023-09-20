@@ -73,15 +73,15 @@ void execute_command(char *command, char **environ)
 
 /**
  * main - entry point.
- * @argc: arg count.
- * @argv: erg vector.
+ *
  *
  * Return: with 0 or NULL if failed.
  */
 
 int main(void)
 {
-	char input[MAX_INPUT_LENGTH], command_path[MAX_PATH_LENGTH], *path, *token, *argv[10];
+	char input[MAX_INPUT_LENGTH], command_path[MAX_PATH_LENGTH];
+	char *path, *token, *argv[10];
 
 	while (1)
 	{
