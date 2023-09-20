@@ -51,7 +51,7 @@ void run_command(char *command)
 }
 
 /**
- * path - entry point.
+ * main - entry point.
  *
  *
  * Return: 0 on success, 1 on error.
