@@ -23,7 +23,7 @@ int new_process(char **args)
 	{
 		if (execvp(args[0], args) == -1)
 		{
-			perror("error in new_process: child process");
+			perror("Command not found");
 		}
 		exit(EXIT_FAILURE);
 	} else if (pid < 0)
