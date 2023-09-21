@@ -1,40 +1,29 @@
-#ifndef _SHELL_H_
-#define _SHELL_H_
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
-#include <sys/types.h>
+#include <unistd.h>
 #include <sys/wait.h>
-#include <sys/stat.h>
-#include <limits.h>
-#include <fcntl.h>
-#include <errno.h>
 
-/* for read/write buffers */
-#define MAX_INPUT_LENGTH 100
-#define MAX_PATH_LENGTH 256
-#define MAX_ARG_COUNT 10
-#define MAX_ARGS 10
-#define UNUSED(x) (void)(x)
-#define MAX_COMMAND_LENGTH 100
+#define TOK_DELIM " \t\r\n\a"
+#define UNUSED(x) (void)(x);
 
-/* for command chaining */
-#define CMD_NORM	0
-#define CMD_OR		1
-#define CMD_AND		2
-#define CMD_CHAIN	3
+extern char **environ;
 
-/* for convert_number() */
-#define CONVERT_LOWERCASE	1
-#define CONVERT_UNSIGNED	2
+/* Function prototypes */
+char *read_line(void);
+char **split_line(char *line);
+int execute_args(char **args);
+int new_process(char **args);
+void shell_interactive(void);
+void shell_no_interactive(void);
 
-/*shell_prompt*/
-int main(void);
-void my_exit(void);
-void my_env(char **environ);
-void execute_command(char *command, char **environ);
-int shell_main(void);
+/* Built-in commands */
+int own_cd(char **args);
+int own_env(char **args);
+int own_help(char **args);
+int own_exit(char **args);
 
 #endif
