@@ -18,6 +18,7 @@
 #define MAX_ARG_COUNT 10
 #define MAX_ARGS 10
 #define UNUSED(x) (void)(x)
+#define MAX_COMMAND_LENGTH 100
 
 /* for command chaining */
 #define CMD_NORM	0
