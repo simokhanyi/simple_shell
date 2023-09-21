@@ -18,33 +18,29 @@ int execute_args(char **args)
 	"cd",
 	"env",
 	"help",
-	"exit",
-	"setenv",
-	"unsetenv"
+	"exit"
 	};
 
 	int (*builtin_func[])(char **) = {
 	&own_cd,
 	&own_env,
 	&own_help,
-	&own_exit,
-	&own_setenv,
-	&own_unsetenv
+	&own_exit
 	};
 
-	size_t i = 0;
+	int i = 0;
 
 	if (args[0] == NULL)
 	{
 		return (-1);
 	}
 
-	for (; i < sizeof(builtin_func_list) / sizeof(char *); i++)
+	for (i = 0; i < (int)(sizeof(builtin_func_list) / sizeof(char *)); i++)
 	{
 		if (strcmp(args[0], builtin_func_list[i]) == 0)
 		{
 			return ((*builtin_func[i])(args));
 		}
 	}
-	return (new_process(args));
+	return ((new_process(args)));
 }
