@@ -7,8 +7,15 @@
 #include "shell.h"
 
 #define MAX_INPUT_LENGTH 100
+#define MAX_PATH_LENGTH 256
 
-shell_main(void)
+/**
+ * shell_main - main entry
+ *
+ * Return: 0 if successfull or NULL if failed.
+ */
+
+int shell_main(void)
 {
 	char input[MAX_INPUT_LENGTH], *argv[2];
 	int status;
@@ -38,7 +45,7 @@ shell_main(void)
 			}
 		} else
 		{
-                        printf("Command not found: %s\n", input);
+			printf("Command not found: %s\n", input);
 		}
 	}
 	return (0);

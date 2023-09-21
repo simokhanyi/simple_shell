@@ -34,6 +34,6 @@ int main(int argc, char *argv[]);
 void my_exit(void);
 void my_env(char **environ);
 void execute_command(char *command, char **environ);
-shell_main(void);
+int shell_main(void);
 
 #endif
