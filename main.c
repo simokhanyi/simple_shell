@@ -10,12 +10,12 @@
 #define MAX_PATH_LENGTH 256
 
 /**
- * shell_main - main entry
+ * main - main entry
  *
  * Return: 0 if successfull or NULL if failed.
  */
 
-int shell_main(void)
+int main(void)
 {
 	char input[MAX_INPUT_LENGTH], *argv[2];
 	int status;

@@ -30,7 +30,7 @@
 #define CONVERT_UNSIGNED	2
 
 /*shell_prompt*/
-int main(int argc, char *argv[]);
+int main(void);
 void my_exit(void);
 void my_env(char **environ);
 void execute_command(char *command, char **environ);
