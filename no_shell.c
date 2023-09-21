@@ -19,7 +19,7 @@ void shell_no_interactive(void)
 	status = -1;
 
 	do {
-		line= read_line();
+		line = read_line();
 		args = split_line(line);
 		status = execute_args(args);
 		free(line);

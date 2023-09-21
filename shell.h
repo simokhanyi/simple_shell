@@ -8,7 +8,7 @@
 #include <sys/wait.h>
 
 #define TOK_DELIM " \t\r\n\a"
-#define UNUSED(x) (void)(x);
+#define UNUSED(x) (void)(x)
 
 extern char **environ;
 
