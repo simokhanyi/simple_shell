@@ -20,6 +20,8 @@ int new_process(char **args);
 void shell_interactive(void);
 void shell_no_interactive(void);
 int command_exists(const char *command);
+int own_setenv(char **args);
+int own_unsetenv(char **args);
 
 /* Built-in commands */
 int own_cd(char **args);

@@ -18,14 +18,18 @@ int execute_args(char **args)
 	"cd",
 	"env",
 	"help",
-	"exit"
+	"exit",
+	"setenv",
+	"unsetenv"
 	};
 
 	int (*builtin_func[])(char **) = {
 	&own_cd,
 	&own_env,
 	&own_help,
-	&own_exit
+	&own_exit,
+	&own_setenv,
+	&own_unsetenv
 	};
 
 	size_t i = 0;
