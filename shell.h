@@ -19,6 +19,7 @@ int execute_args(char **args);
 int new_process(char **args);
 void shell_interactive(void);
 void shell_no_interactive(void);
+int command_exists(const char *command);
 
 /* Built-in commands */
 int own_cd(char **args);

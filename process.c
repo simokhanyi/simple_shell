@@ -12,7 +12,6 @@
  * Return: 0 if successful or NULL if failed.
  */
 
-
 int new_process(char **args)
 {
 	pid_t pid;
