@@ -17,7 +17,8 @@ int own_cd(char **args)
 	if (args[1] == NULL)
 	{
 		fprintf(stderr, "cd: missing argument\n");
-	} else
+	}
+	else
 	{
 		if (chdir(args[1]) != 0)
 		{
@@ -85,7 +86,8 @@ int own_exit(char **args)
 	{
 		status = atoi(args[1]);
 		exit(status);
-	} else
+	}
+	else
 	{
 		exit(0);
 	}
