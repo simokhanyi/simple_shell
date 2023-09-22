@@ -24,7 +24,7 @@ int own_cd(char **args)
 			perror("cd");
 		}
 	}
-	return (1);
+	return (0);
 }
 
 
@@ -67,7 +67,7 @@ int own_help(char **args)
 	printf("3. help: Display this help message.\n");
 	printf("4. exit: Exit the shell.\n");
 
-	return (1);
+	return (0);
 }
 
 /**
