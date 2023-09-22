@@ -46,7 +46,7 @@ int own_env(char **args)
 		printf("%s\n", *env);
 		env++;
 	}
-	return (1);
+	return (0);
 }
 
 /**
