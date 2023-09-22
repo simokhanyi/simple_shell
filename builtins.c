@@ -69,24 +69,3 @@ int own_help(char **args)
 
 	return (1);
 }
-
-/**
- * own_exit - exit function.
- * @args: arguments.
- *
- * Return: 0 if successful or NULL if failed.
- */
-
-int own_exit(char **args)
-{
-	int status;
-
-	if (args[1] != NULL)
-	{
-		status = atoi(args[1]);
-		exit(status);
-	} else
-	{
-		exit(0);
-	}
-}

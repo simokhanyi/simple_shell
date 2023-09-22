@@ -19,7 +19,7 @@ void shell_interactive(void)
 	status = -1;
 
 	do {
-		printf("simple_prompt~$ ");
+		printf("simple_shell~$ ");
 		line = read_line();
 		args = split_line(line);
 		status = execute_args(args);
